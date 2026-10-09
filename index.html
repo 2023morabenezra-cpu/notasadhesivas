@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor y Pizarrón de Notas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Contenedor Marco Principal -->
+  <main class="main-card">
+    
+    <!-- SECCIÓN 1: CONVERSOR -->
+    <section class="section-box">
+      <div class="input-group">
+        <input type="text" id="note-name" placeholder="Nombre de la notita">
+      </div>
+
+      <div class="currency-row">
+        <input type="number" id="amount" placeholder="20000" min="0">
+        <select id="currency-type">
+          <option value="U$S">U$S</option>
+          <option value="EUR">€ (EUR)</option>
+        </select>
+      </div>
+
+      <div class="action-box">
+        <div class="conversion-result" id="conversion-display">0 U$S</div>
+        <button type="button" class="btn-add" id="btn-add-converted">AGREGAR</button>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: PIZARRÓN DE NOTAS -->
+    <section class="section-box board-section">
+      
+      <!-- Grid de notas agregadas -->
+      <div class="board-grid" id="board-grid">
+        <!-- Ejemplo precargado del boceto -->
+        <div class="note-card">
+          <button class="btn-delete" title="Eliminar">&times;</button>
+          <span>Vacaciones<br>$20.000 = 13U$S</span>
+        </div>
+      </div>
+
+      <!-- Barra de nota personalizada -->
+      <div class="custom-note-bar">
+        <input type="text" id="custom-note-input" placeholder="COMPRAR GALLETAS">
+        <button type="button" id="btn-add-custom">AGREGAR</button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* Reset y estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Marco exterior verde */
+.main-card {
+  background-color: #27ae60;
+  border-radius: 40px;
+  padding: 30px;
+  width: 100%;
+  max-width: 950px;
+  display: flex;
+  gap: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedores de las dos secciones (Vértices redondeados verde lima) */
+.section-box {
+  background-color: #b3e515;
+  flex: 1;
+  border-radius: 30px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 420px;
+}
+
+/* Estilos de inputs */
+input, select {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  background-color: #bcbcbc;
+  color: #555;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Fila de importe + moneda */
+.currency-row {
+  display: flex;
+  background-color: #bcbcbc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.currency-row input {
+  flex: 1;
+  background-color: transparent;
+  padding: 15px;
+  color: #444;
+}
+
+.currency-row select {
+  background-color: #7f7f7f;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+}
+
+/* Bloque del resultado y botón agregar conversor */
+.action-box {
+  background-color: #bcbcbc;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.conversion-result {
+  font-size: 22px;
+  font-weight: bold;
+  color: #444;
+}
+
+.btn-add {
+  background-color: #a6a6a6;
+  color: #444;
+  border: none;
+  padding: 10px 25px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #8c8c8c;
+}
+
+/* --- SECCIÓN 2: PIZARRÓN --- */
+.board-section {
+  justify-content: space-between;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Tarjetas violetas */
+.note-card {
+  background-color: #a242ad;
+  color: #f182f8;
+  border-radius: 18px;
+  padding: 15px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.4;
+  position: relative;
+  word-break: break-word;
+}
+
+/* Botón eliminar nota */
+.btn-delete {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.btn-delete:hover {
+  opacity: 1;
+}
+
+/* Barra inferior personalizada (Naranja / Amarillo) */
+.custom-note-bar {
+  background-color: #ffb703;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+}
+
+.custom-note-bar input {
+  flex: 1;
+  background-color: transparent;
+  padding: 12px 15px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.custom-note-bar input::placeholder {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.custom-note-bar button {
+  background-color: #ffd166;
+  border: none;
+  color: #d97706;
+  font-weight: bold;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.custom-note-bar button:hover {
+  background-color: #ffe08a;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .main-card {
+    flex-direction: column;
+  }
+}
